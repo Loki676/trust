@@ -18,7 +18,7 @@ jobs:
 
       - name: Inject secret URL into HTML
         run: |
-          sed -i "s|YOUR_SCRIPT_URL_HERE|${{ secrets.YOUR_SCRIPT_URL_HERE }}|g" index.html
+          sed -i "s|APPS_SCRIPT_URL_PLACEHOLDER|${{ secrets.APPS_SCRIPT_URL }}|g" index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
